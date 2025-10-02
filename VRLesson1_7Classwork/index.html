@@ -7,6 +7,32 @@
       <a-assets>
         <img id="texture" src="pacman_maze.jpg" />
       </a-assets>
+
+
+
+      <a-entity class="pacman" position="1 0 -3">
+        <a-sphere color = "yellow" scale="1.25 1 1" position="0 1 0" rotation = "0 0 10" radius="0.5"  theta-start="0" theta-length="90" side="double"> </a-sphere>
+        <a-sphere color = "yellow" scale="1.25 1 1" position="0 0.8 0" rotation = "0 0 170" radius="0.5"  theta-start="0" theta-length="90" side="double"> </a-sphere>
+
+        <a-cylinder position = "0.15 1.25 0.5" height = "0.05" radius = "0.075" rotation="90 0 0"  color = "black"></a-cylinder>
+
+      </a-entity>
+
+      
+      <a-entity class="ghost" position="-1 -1 -1">
+      <a-cylinder color="#87CEFA" position = "0 1.5 -2" scale="2 1 1" height = "0.3" radius = "0.5" rotation="0 90 90" side="double" theta-start= "0" theta-length= "180"></a-cylinder>
+        
+        <a-cylinder color="#87CEFA" position = "-0.3 1.5 -2" height = "0.3" radius = "0.2" rotation="180 90 90" side="double" theta-start= "0" theta-length= "180"></a-cylinder>
+        <a-cylinder color="#87CEFA" position = "0 1.5 -2" height = "0.3" radius = "0.2" rotation="180 90 90" side="double" theta-start= "0" theta-length= "180"></a-cylinder>
+        <a-cylinder color="#87CEFA" position = "0.3 1.5 -2" height = "0.3" radius = "0.2" rotation="180 90 90" side="double" theta-start= "0" theta-length= "180"></a-cylinder>
+
+        <a-cylinder position = "-0.2 2.1 -1.8" height = "0.05" radius = "0.1" rotation="90 0 0"  color = "black"></a-cylinder>
+        <a-cylinder position = "0.2 2.1 -1.8" height = "0.05" radius = "0.1" rotation="90 0 0"  color = "black"></a-cylinder>
+
+      </a-entity>
+
+
+
       <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" repeat="5 5" src="#texture"></a-plane>
       <a-sky color="black"></a-sky>
     </a-scene>
