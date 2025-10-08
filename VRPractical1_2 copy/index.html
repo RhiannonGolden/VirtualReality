@@ -1,0 +1,2453 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+     
+      <a-assets>
+        <img id="outside" src="outside.jpeg"/>
+        <img id="inside" src="inside.webp"/>
+        <img id="roof" src="roof.png"/>
+        <img id="grass" src="grass.jpg"/>
+        <img id="path" src="path.jpg"/>
+        <img id="fence" src="fence.jpg"/>
+        <img id="road" src="road.jpg"/>
+        <img id="pavement" src="pavement.jpg"/>
+        <img id="floor" src="floor.jpg"/>
+        <img id="top" src="top.jpg"/>
+        <img id="windshield" src="360_F_915466089_t0bYKg9NRxeFWUNWVAic2e23Ng0l7WqK.jpg"/>
+        <img id="light" src="1000_F_273605135_CxSN62MwLUb5R18c0q30TIeaSzSnG5UJ.jpg"/>
+        <img id="plate" src="excelsior_embossed_plate_3d_master.jpg"/>
+        <img id="grill" src="grilltexture.jpg"/>
+        <img id="tire" src="istockphoto-502936829-612x612.jpg"/>
+        <img id="seat" src="textured-brown-leather-texture-with-stitched-lines_494516-980.jpg"/>
+        <img id="tree" src="tree.jpg"/>
+        <img id="leaf" src="leaf.jpg"/>
+        <img id="sky" src="sky1.jpeg"/>
+      </a-assets>
+
+      <a-entity class="street">
+        <a-entity class="house" position="0 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="house" position="30 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="house" position="-30 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+        
+        <a-entity class="tree_row" position="8 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="38 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="-23 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="-53 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-entity class="street" position="0 0 20" rotation="0 180 0">
+        <a-entity class="house" position="0 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="house" position="30 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="house" position="-30 0 4.95">
+          <a-cylinder src="#roof" repeat = "1 4" position="-6 3.5 -2.35" radius="1" height="5.5" scale="4.5 1 1" segments-radial="3" rotation="-90 0 0"></a-cylinder>
+          <a-cylinder src="#roof" repeat = "2 4" position="0 3.5 -9" radius="1" height="20" scale="4.5 1" segments-radial="3" rotation="-90 0 90"></a-cylinder>
+          <a-plane src="#floor" repeat="1 4" position="0 0.025 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-plane>
+          <a-plane src="#floor" repeat="1 4" position="-6 0.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-plane>
+
+          <a-box src="#top" repeat="10 10" position="0 3 -9" rotation="-90 0 0" height="6" width="18" depth="0.1"></a-box>
+          <a-box src="#top"  repeat="10 10" position="-6 3.025 -3" rotation="-90 0 0" height="6" width="6" depth="0.1"></a-box>
+
+      
+          <a-entity class="room" position="-6 0 0">
+                <a-entity class="wall">
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                  <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                  <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                    
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                  <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+
+                  <a-entity class="window" position="0 1.5 0">
+                    <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                    <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                    <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                  </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="-2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" width="2" height="3" depth="0.1" position="2.0 1.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -5.7">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                </a-entity>
+
+          </a-entity>
+
+          <a-entity class="room" position="-6 0 -6">
+                
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="0 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2.5" height="3" depth="0.1" position="1.75 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="1" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="-1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2.5" height="3" depth="0.1" position="1.75 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.5 0.5" width="1" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#inside" repeat="1 0.5" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                </a-entity>
+
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="room" position="6 0 -6">
+                <a-entity class="wall">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+                <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 -0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 -0.1" ></a-box>
+                    
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+
+                </a-entity>
+                
+                <a-entity class="wall" position="0 0 -6">
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                    <a-box src="#outside" width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                    <a-box src="#outside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="-2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" width="2" height="3" depth="0.1" position="2 1.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 0.5 0.1" ></a-box>
+                    <a-box src="#inside" repeat="0.7 0.4" width="2" height="1" depth="0.1" position="0 2.5 0.1" ></a-box>
+
+                    <a-entity class="window" position="0 1.5 0">
+                      <a-box width="2" color="blue" height="1" depth="0.1" color="blue" opacity="0.2"></a-box>
+                      <a-box width="2" color="grey" height="0.05" depth="0.1" position="0 0 0.05"></a-box>
+                      <a-box width="0.05" color="grey" height="1" depth="0.1" position="0 0 0.05"></a-box>
+                    </a-entity>
+                    
+                </a-entity>
+          </a-entity>
+
+          <a-entity class="yard">
+
+            <a-box color="white" src="#fence" repeat="2 1" position="-1.75 0 0" height="1.5" width="2.5" depth="0.1"></a-box>
+            <a-box src="#path" repeat="1 10" position="0 0.05 -2.95" rotation="-90 0 0" width="1" height="6" depth="0.05"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="4.75 0 0" height="1.5" width="8.5" depth="0.1"></a-box>
+            <a-box color="white" src="#fence" repeat="2 1" position="9 0 -2.95" rotation="0 90 0" height="1.5" width="6" depth="0.1"></a-box>
+
+          </a-entity>
+        </a-entity>
+        
+        <a-entity class="tree_row" position="8 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="38 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="-23 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <a-entity class="tree_row" position="-53 0 -2">
+          <a-entity class="tree" position="7.5 0 0.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+
+          <a-entity class="tree" position="7.5 0 9.5">
+            <a-sphere src="#leaf" repeat="2 2" position="0 4 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="-1 3 -5" radius="1.25"></a-sphere>
+            <a-sphere src="#leaf" repeat="2 2" position="1 3 -5" radius="1.25"></a-sphere>
+            <a-cylinder src="#tree" repeat="5 5" position="0 0.75 -5" radius="0.5" height="3.5"></a-cylinder>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+
+      <a-entity class="car_row">
+        <a-entity class="car" position="-46 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-36 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-22 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-12 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="0 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="8 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="15 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="25 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="35 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="42 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+      </a-entity>
+
+      <a-entity class="car_row" position="0 0 20" rotation="0 180 0">
+        <a-entity class="car" position="-46 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-36 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-22 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="-12 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="0 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="8 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="15 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="25 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="35 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+        <a-entity class="car" position="42 1 11.25" width="1.5" height="2" depth="3" rotation = "0 90 0">
+          <a-box color="rgb(255,255,167)" position = "0 -0.5 0" depth = "2.5" width = "0.8" height="0.1"> </a-box>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="-0.5 -0.73 -1.1"></a-torus>
+
+          <a-torus src="#tire" radius="0.25" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+          <a-torus radius="0.1" radius-tubular="0.05" rotation="0 90 0" position="0.5 -0.73 1.1"></a-torus>
+
+          <a-box src="#grill" repeat="1.5 1.5"height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 1.2"></a-box>
+          <a-triangle color="rgb(255,255,167)" vertex-a="0 0.1 1.25" vertex-b="-0.274 -0.04 1.25" vertex-c="0.274 -0.04 1.25"></a-triangle>
+          <a-box color="rgb(255,255,167)" height = "0.4" width = "0.5" depth = "0.1" position="0 -0.25 0.5"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -0.25"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" height="0.4" width = "0.475" depth = "0.1" position="0 -0.25 -1.1"></a-box>
+          <a-box color="rgb(145, 245, 125)" src="#seat" position = "0 -0.4 0" depth = "2.4" width = "0.5" height="0.1"> </a-box>
+      
+          <a-box color="rgb(255,255,167)" position = "0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 -25"> </a-box>
+
+          <a-box color="rgb(255,255,167)" position = "-0.3 -0.25 0" depth = "2.5" width = "0.42" height="0.1" rotation = "0 0 90"> </a-box>
+          <a-box color="rgb(255,255,167)" position = "-0.13 0.05 0.87" depth = "0.75" width = "0.3" height="0.05" rotation = "0 0 25"> </a-box>
+
+          
+          <a-box src="#windshield" height = "0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 0.3"></a-box>
+          <a-box src="#windshield" height="0.2" width = ".5" depth = "0.05" rotation="-35 0 0" position = "0 0.05 -0.3"></a-box>
+        
+          <a-box color="rgb(255,255,167)" height = "0.42" width = "0.5" depth = "0.1" position="0 -0.25 -1.2"></a-box>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 45 45" position="-0.2 -0.25 1.3"></a-cylinder>
+          <a-cylinder src="#windshield" repeat="10 10" height="0.1" radius="0.075" rotation="90 0 0 0" position="0.2 -0.25 1.3"></a-cylinder>
+
+          <a-cylinder color="red" height="0.05" radius="0.009" position="-0.0025 0.15 1.2"></a-cylinder>
+          <a-torus-knot p="5" q="7" radius="0.025" color="red" radius-tubular="0.001" position="-0.0025 0.2 1.2"></a-torus-knot>
+          <a-box src="#plate" height="0.15" width = "0.35" depth = "0.025" position="0 -0.25 -1.25"></a-box>
+        
+
+        </a-entity>
+
+      </a-entity>
+
+
+      <a-plane src="#road" repeat="10 1" position="0 0.05 10" rotation="-90 0 0" width="100" height="6"></a-plane>
+      <a-box src="#pavement" color="white" repeat="10 1" position="0 0 6" width="100" height="0.25" depth="2" color="grey"></a-box>
+      <a-box src="#pavement" color="white" repeat="10 1" position="0 0 14" width="100" height="0.25" depth="2" color="grey"></a-box>
+
+      <a-plane src="#grass" repeat="30 30" position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+      <a-sky src="#sky"></a-sky>
+      <a-camera position="0 1.4 5"></a-camera>
+    </a-scene>
+
+    
+  </body>
+</html>
