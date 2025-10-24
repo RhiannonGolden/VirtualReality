@@ -48,11 +48,10 @@ function loop(){
   }
 
 
-  for(let i=0; i<snowflakes.length;i++){
+  //Challenge 4: Traverse your array of snowflakes and make each snowflake fall
+    for(let i=0; i<snowflakes.length;i++){
     snowflakes[i].fall();
   }
-
-  //Challenge 4: Traverse your array of snowflakes and make each snowflake fall
 
   window.requestAnimationFrame( loop );
 }
