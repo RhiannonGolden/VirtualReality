@@ -31,14 +31,8 @@ window.addEventListener("DOMContentLoaded",function() {
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     let s = new Snowflake(x, 20, z);
-    snowflakes.push(s)
+    snowflakes.push(s);
   }
-
-
-
-
-
-
 
   loop();
 })
