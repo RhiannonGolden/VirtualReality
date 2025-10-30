@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); 
 
 
-  for(let g = 0; g < 10; g++){
+  for(let g = 0; g < 15; g++){
 
     for(let i = 0; i < 10; i++){
     let x = 5*i;
