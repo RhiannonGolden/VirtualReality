@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded",function() {
   mech = document.getElementById("mech-1");
   
 
-  for(let i = 0; i < 10; i++){
+  for(let i = 0; i < 15; i++){
     let x = rnd(-50, 50);
     let y = 13;
     let z = rnd(-50, 50);
