@@ -2,7 +2,8 @@ let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
 let scene, rockets = [ ], ufos = [ ];
 
 window.addEventListener("DOMContentLoaded",function() {
-  scene = document.querySelector("a-scene"); 
+  scene = document.querySelector("a-scene");
+  fireTemplate = document.querySelector("#fireTemplate");
 
 
   for(let g = 0; g < 10; g++){
@@ -12,7 +13,8 @@ window.addEventListener("DOMContentLoaded",function() {
     let y = rnd(-100, 0);
     let z = 5*g;
     let speed = rnd(2, 20)/100;
-    let rocket = new Rocket(x-20, y, z-20, speed);
+    let rotate = rnd(1, 25);
+    let rocket = new Rocket(x-20, y, z-20, speed, rotate);
     rockets.push(rocket);
   }
   
@@ -32,6 +34,8 @@ window.addEventListener("DOMContentLoaded",function() {
   
   }
 
+  
+
 
   loop();
 })
@@ -40,12 +44,18 @@ function loop(){
 
   for(let i=0; i<rockets.length;i++){
     rockets[i].launch();
+    rockets[i].spin();
   }
+
 
 
   for(let i=0; i<ufos.length;i++){
     ufos[i].invade();
+    ufos[i].spin();
   }
+
+
+
 
 
   

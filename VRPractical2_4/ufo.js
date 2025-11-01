@@ -4,6 +4,9 @@ class UFO{
         this.y = y;
         this.z = z;
         this.speed = speed;
+        this.a = 0;
+        this.da = 5;
+    
 
         this.obj = document.createElement("a-entity");
 
@@ -64,6 +67,12 @@ class UFO{
         if(this.y < -10){
             this.y = rnd(100, 200);
         }
+    }
+
+
+    spin(){
+        this.a += this.da;
+        this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
     }
 
 

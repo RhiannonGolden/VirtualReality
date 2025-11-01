@@ -1,9 +1,11 @@
 class Rocket{
-    constructor(x, y, z, speed){
+    constructor(x, y, z, speed, rotate){
         this.x = x;
         this.y = y;
         this.z = z;
         this.speed = speed;
+        this.a = 0;
+        this.rotate = rotate;
 
         this.obj = document.createElement("a-entity");
 
@@ -45,6 +47,11 @@ class Rocket{
         }
     }
     
+
+    spin(){
+        this.a += this.rotate;
+        this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
+    }
 
     
 }
