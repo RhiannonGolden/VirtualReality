@@ -1,9 +1,9 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
-let scene, rockets = [ ], ufos = [ ];
+let scene, rockets = [ ], ufos = [ ], holeTemplate, holes = [ ];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
-  fireTemplate = document.querySelector("#fireTemplate");
+  holeTemplate = document.querySelector("#holeTemplate");
 
 
   for(let g = 0; g < 10; g++){
@@ -31,10 +31,15 @@ window.addEventListener("DOMContentLoaded",function() {
     let ufo = new UFO(x-20, y, z-20, speed);
     ufos.push(ufo);
     }
-  
   }
 
-  
+
+  for(let i = 0; i < 1; i++){
+    
+    let hole = new Hole();
+    holes.push(hole);
+  }
+
 
 
   loop();
@@ -54,8 +59,10 @@ function loop(){
     ufos[i].spin();
   }
 
-
-
+  
+  for(let i=0; i<holes.length;i++){
+    holes[i].spin();
+  }
 
 
   
