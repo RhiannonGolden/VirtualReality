@@ -12,6 +12,10 @@ function loop(){
   target.a += target.da;
 
   target.setAttribute("rotation",{x:target.a, y:0, z: 0});
+  if(target.a < -90){
+    target.da = 0;
+    target.a = 270;
+  }
 
   window.requestAnimationFrame( loop );
 }
