@@ -11,18 +11,27 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+"xxxxxxxxxxxxxxxxxxxxx",
+"xbbbbbbbbbxbbbbbbbxbb",
+"xbxxxxxxxbxbxxxbxbxbx",
+"xbxbbbbbbbbbxbbbxbxbx",
+"xbxbbxxxxxxxxbxxxbxbx",
+"xbxbbbxbbbbbxbxbxbxbx",
+"xbxxxxxbxxxbxxxbxxxbx",
+"xbbbbbbbxbxbbbbbbbxbx",
+"xbxxxxxbxbxxxxxxxxxbx",
+"xbxbbbxbbbxbbbxbbbbbx",
+"xbxxxbxxxbxbxbxxxxxbx",
+"xbbbxbxbxbbbxbbbbbxbx",
+"xxxbxbxbxxxbxxxxxxxbx",
+"xbbbxbxbbbbbbbbbbbxbx",
+"xbxxxbxxxbxxxxxbxbxbx",
+"xbxbbbxbxbxbbbbbxbxbx",
+"xbxbxbxbxxxbxxxxxbxbx",
+"xbxbxbbbbbbbxbbbxbbbx",
+"xbxbxbxxxxxxxbxbxxxbx",
+"bbxbxbbbbbbbbbxbbbxbx",
+"xxxxxxxxxxxxxxxxxxxxx",
 ];
 
 /* Challenge 2
@@ -34,6 +43,19 @@ let scene;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   for(let r = 0; r < maze.length; r++){
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        new HorizontalWall(2*c,2,r*2)
+      }else if(cols[c]=="y"){
+        new VerticalWall(2*c,2,r*2)
+      }else if(cols[c]=="b"){
+        new Blank(c*2,2,r*2)
+      }      
+    }
+  }
+
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
@@ -41,6 +63,6 @@ window.addEventListener("DOMContentLoaded",function() {
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
-  }
+   
 
 })
