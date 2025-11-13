@@ -4,12 +4,6 @@
    can also incorporate classes that have animations integrated into them. 
 */
 
-/* Challenge 1
-   Add appropriate classes to use as objects in your maze.  Choose characters to represent these objects and 
-   position them in the maze.   In Challenge 3 and 4, you will generate the maze along with any other object 
-   you chose to put in the maze.  Get Creative!
-*/
-
 let maze = [
 "xxxxxxxxxxxxxxxxxxxxx",
 "xbbbbbbbbbxbbbbbbbxbb",
@@ -34,35 +28,49 @@ let maze = [
 "xxxxxxxxxxxxxxxxxxxxx",
 ];
 
-/* Challenge 2
-   Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
-*/
 
-let scene;
+let scene, brickTemplate, bricks=[ ], wallTemplate, walls=[ ], rockTemplate, rocks=[ ];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
+  brickTemplate = document.querySelector("#brickTemplate");
+  wallTemplate = document.querySelector("#wallTemplate");
+  rockTemplate = document.querySelector("#rockTemplate");
+
   for(let r = 0; r < maze.length; r++){
     let row = maze[r];
     let cols = row.split("");
+
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "x"){
-        new HorizontalWall(2*c,2,r*2)
-      }else if(cols[c]=="y"){
-        new VerticalWall(2*c,2,r*2)
+        let wall = new Wall(2*c,3,r*2);
+        walls.push(wall);
       }else if(cols[c]=="b"){
-        new Blank(c*2,2,r*2)
+        let brick = new Brick(c*2,0,r*2);
+        bricks.push(brick);
       }      
     }
   }
 
-    /* Challenge 3
-      Choose a technique to traverse the each character in the string.
-    */ 
-    /* Challenge 4
-       Make an appropriate decision based on the characters you chose to enter 
-       in the maze.  Create an instance of the corresponding object.
-    */
+  let rock = new Rock(-10, 2, 40);
+
+
+  for(let i = 0; i < 3; i++){
+    
+    let rock = new Rock(-10, 10, 40);
+    rocks.push(rock);
+  }
+
+
+
+   
    
 
 })
+
+
+function loop(){
+  for(let i=0; i<rockets.length;i++){
+    rocks[i].fall();
+  }
+}
