@@ -4,7 +4,6 @@
     <script src="script.js"></script>
     <script src="wall.js"></script>
     <script src="brick.js"></script>
-    <script src="rock.js"></script>
   </head>
   <body>
     <a-scene>
@@ -52,18 +51,12 @@
         </a-entity>
 
         <a-entity id="roof">
-          <a-box src="#wall" repeat="10 10" height="0.1" width="41.5" depth="41" position="19.9 116.1 20"></a-box>
+          <a-box src="#wall" repeat="10 10" height="0.1" width="41.5" depth="41" position="19.9 6.1 20"></a-box>
         </a-entity>
             
         <a-entity id="enter" position="-0.9 3 38">
           <a-box src="#enter" color="purple" opacity="0.5" height="6" depth="2" width="0.1"></a-box>
         </a-entity>
-
-
-        <a-entity id="rockTemplate">
-          <a-dodecahedron color="grey" radius="0.5"></a-dodecahedron>
-        </a-entity>
-
 
 
         <a-entity position="60 0 0" rotation="0 -90 0" class="street">

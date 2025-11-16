@@ -29,13 +29,12 @@ let maze = [
 ];
 
 
-let scene, brickTemplate, bricks=[ ], wallTemplate, walls=[ ], rockTemplate, rocks=[ ];
+let scene, brickTemplate, bricks=[ ], wallTemplate, walls=[ ];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   brickTemplate = document.querySelector("#brickTemplate");
   wallTemplate = document.querySelector("#wallTemplate");
-  rockTemplate = document.querySelector("#rockTemplate");
 
   for(let r = 0; r < maze.length; r++){
     let row = maze[r];
@@ -51,26 +50,6 @@ window.addEventListener("DOMContentLoaded",function() {
       }      
     }
   }
-
-  let rock = new Rock(-10, 2, 40);
-
-
-  for(let i = 0; i < 3; i++){
-    
-    let rock = new Rock(-10, 10, 40);
-    rocks.push(rock);
-  }
-
-
-
-   
    
 
 })
-
-
-function loop(){
-  for(let i=0; i<rockets.length;i++){
-    rocks[i].fall();
-  }
-}
