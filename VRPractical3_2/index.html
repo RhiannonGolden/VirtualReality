@@ -2,18 +2,26 @@
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
+    <script src="rocket.js"></script>
   </head>
     <body>
-      <h1>Hi</h1>
       <a-scene >
         <a-plane color="brown" position="0 0 -5" rotation="-90 0 0" width="50" height="50"></a-plane>
         <a-sky color="blue"></a-sky>
 
-        <a-camera position="0 2 0">
-          <a-cursor raycaster="objects: [interact]"></a-cursor>
+        <a-camera position="0 3 0">
+          <a-cursor        <!raycaster="objects: [interact]"-->      ></a-cursor>
         </a-camera>
         
       </a-scene>
+
+
+      <a-entity id="rocketTemplate" position = "0 .5 0" class="rocket">
+        <a-cone radius-top="0" radius-bottom="0.5" height="1" color="red" position="0 0 -2"></a-cone>
+        <a-cylinder radius="0.5" height="2" color="blue" position="0 -1.5 -2"></a-cylinder>
+        <a-cone radius-top="0" radius-bottom="0.25" height="2" color="orange" position="0 -3.5 -2" rotation="-180 0 0"></a-cone>
+      </a-entity>
+
 
     </body>
 </html>
