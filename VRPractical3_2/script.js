@@ -1,10 +1,12 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
-let scene, rocketTemplate, rockets = [ ];
+let scene, rocketTemplate, rockets = [ ], carTemplate, cars = [ ], snowmanTemplate, snowmen = [ ];
 
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   rocketTemplate = document.querySelector("#rocketTemplate");
+  carTemplate = document.querySelector("#carTemplate");
+  snowmanTemplate = document.querySelector("#snowmanTemplate")
 
 
   for(let g = 0; g < 5; g++){
@@ -18,6 +20,19 @@ window.addEventListener("DOMContentLoaded",function() {
     }
   }
 
+  for(let i = 0; i < 1; i++){
+    let speed = rnd(2, 20)/100;
+
+    cars.push(new Car(-5, -3, speed));
+  }
+
+
+  for(let i = 0; i < 1; i++){
+    let rotate = rnd(1, 10);
+
+    snowmen.push(new Snowman(-5, 3, rotate));
+  }
+
   loop();
 })
 
@@ -26,6 +41,16 @@ function loop(){
     rocket.launch();
     rocket.spin();
   }
+
+  for(let car of cars){
+    car.drive();
+  }
+
+  for(let snowman of snowmen){
+    snowman.spins();
+  }
+
+
 
   window.requestAnimationFrame(loop);
 }
