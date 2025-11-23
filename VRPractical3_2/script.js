@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i = 0; i < 1; i++){
     let speed = rnd(2, 20)/100;
 
-    cars.push(new Car(-5, -3, speed));
+    cars.push(new Car(-5, -3.5, speed));
   }
 
 
