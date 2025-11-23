@@ -21,9 +21,10 @@ window.addEventListener("DOMContentLoaded",function() {
   }
 
   for(let i = 0; i < 1; i++){
-    let speed = rnd(2, 20)/100;
+    let speed = rnd(5, 20)/100;
 
     cars.push(new Car(-5, -3.5, speed));
+    cars.push(new Car(5, -6.5, speed));
   }
 
 
