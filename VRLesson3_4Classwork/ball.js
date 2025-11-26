@@ -14,6 +14,7 @@ class Ball{
     this.obj.addEventListener("click", ()=>{
       this.flag = true;
       s++;
+      this.obj.setAttribute("opacity", 0);
     })
   
 
