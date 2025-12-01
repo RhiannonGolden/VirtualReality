@@ -8,8 +8,8 @@ window.addEventListener("DOMContentLoaded",function() {
      Add 10 new PotHole at random locations to the potholes array
   */
  for(let i =0; i<10; i++){
-  let x = rnd(-50, 50);
-  let z = rnd(-50, 50);
+  let x = rnd(-30, 30);
+  let z = rnd(-30, 30);
   let pothole = new Pothole(x,z);
   potholes.push(pothole);
  }
