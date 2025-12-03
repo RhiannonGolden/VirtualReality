@@ -26,7 +26,7 @@ function loop(){
 
   for(let block of blocks){
     if(dart && distance(block.obj,dart.obj) < 1){
-      block.obj.shot = true;
+      block.shot = true;
     }
     block.shrink();
   }
