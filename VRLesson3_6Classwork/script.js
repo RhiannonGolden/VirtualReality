@@ -21,17 +21,17 @@ window.addEventListener("DOMContentLoaded",function() {
 
     window.addEventListener("keypress", function(e){
       if(e.key == 1){
-        gem.object3D.rotation.x += 1;
+        gem.object3D.rotation.x += (Math.PI/10);
       }else if(e.key =="r"){
-        gem.object3D.rotation.x -= 1;
+        gem.object3D.rotation.x -= (Math.PI/10);
       }else if(e.key == 2){
-        gem.object3D.rotation.y += 1;
+        gem.object3D.rotation.y += (Math.PI/10);
       }else if(e.key == "t"){
-        gem.object3D.rotation.y -= 1;
+        gem.object3D.rotation.y -= (Math.PI/10);
       }else if(e.key == 3){
-        gem.object3D.rotation.z += 1;
+        gem.object3D.rotation.z += (Math.PI/10);
       }else if(e.key == "y"){
-        gem.object3D.rotation.z -= 1;
+        gem.object3D.rotation.z -= (Math.PI/10);
       }
     })
 
