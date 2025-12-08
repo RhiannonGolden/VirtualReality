@@ -1,7 +1,14 @@
 class Bullet{
   constructor(){
-    this.obj = document.createElement("a-sphere");
-    this.obj.setAttribute("radius",0.5)
+    //this.obj = document.createElement("a-sphere");
+
+
+   this.a = 0;
+
+
+    this.obj = ufoTemplate.cloneNode(true);
+
+    this.obj.setAttribute("scale","0.5 0.5 0.5");
     let pos = camera.object3D.position;
     this.obj.setAttribute("position",{x:pos.x,y:pos.y,z:pos.z});
     scene.append(this.obj);
@@ -14,12 +21,18 @@ class Bullet{
     this.dx = v_xz * Math.sin(theta);
     this.dy = v * Math.sin(phi);
   }
-  fire(){
 
+  fire(){
     this.obj.object3D.position.x += this.dx;
     this.obj.object3D.position.y += this.dy;
     this.obj.object3D.position.z += this.dz; 
 
     //this.obj.object3D.rotation.y = this.theta - Math.PI/2;
   }
+
+
+  spin(){
+    this.a += 15;
+    this.obj.setAttribute("rotation",{x:this.a, y:0, z:0});
+    }
 }

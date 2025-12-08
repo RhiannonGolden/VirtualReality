@@ -16,9 +16,9 @@ window.addEventListener("DOMContentLoaded",function() {
     let rotate = rnd(1, 25);
     let rocket = new Rocket(x-20, y, z-20, speed, rotate);
     rockets.push(rocket);
+    }
   }
-  
-  }
+
 
 
   for(let g = 0; g < 10; g++){
@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded",function() {
 
 
   for(let i = 0; i < 1; i++){
-    
     let hole = new Hole();
     holes.push(hole);
   }
@@ -51,7 +50,6 @@ function loop(){
     rockets[i].launch();
     rockets[i].spin();
   }
-
 
 
   for(let i=0; i<ufos.length;i++){
