@@ -22,12 +22,20 @@ class Ball{
        Create a cursor and add it to the camera.  This will
        enable you to interact with other objects from this camera
     */
+   this.cursor = document.createElement("a-cursor");
+   this.camera.append(this.cursor);
     
     /* Challenge 4
        When the user clicks on this sphere, turn off the cameras of 
        all the other balls (Hint: Challenge 1) and set the camera
        of this ball as the active one.
     */
+
+    this.obj.addEventListener("click",()=>{
+      off();
+      mainCamera.setAttribute("active",false);
+      this.camera.setAttribute("active",true);
+    })
 
     this.obj.append( this.camera )
 
@@ -41,4 +49,9 @@ class Ball{
     }
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z });
   }
+
+
+
 }
+
+
