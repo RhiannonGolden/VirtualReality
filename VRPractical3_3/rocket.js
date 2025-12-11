@@ -7,6 +7,7 @@ class Rocket{
     this.speed = speed;
     this.rotate = rotate;
     this.flag = false;
+    this.flag2 = true;
     this.drop = 0.15;
     
     this.obj = rocketTemplate.cloneNode(true);
@@ -30,14 +31,6 @@ class Rocket{
       //this.obj.object3D.position.y = this.crash;
     }
   }
-
-
-  hit(){
-    this.obj.setAttribute("position",{x:this.x,y:-100,z:this.z});
-    //this.obj.object3D.position.y = 5;
-  }
-
-
 
 
 }

@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 10, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ];
+let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 60, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ], hit_count = 0;
 
 
 
@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i = 0; i < 20; i++){
     let x = rnd(-50, 50);
     let y = rnd(-1, 4);
-    let z = rnd(-125, -25);
+    let z = rnd(-150, -25);
     let speed = rnd(5, 10)/100;
     let rotate = rnd(25, 40)/10;
 
@@ -70,7 +70,7 @@ function loop(){
 
   ammo_text.setAttribute("value",`Ammo: ${ammo_count}`);
   time_text.setAttribute("value",`${time_count} seconds`);
-  //hearts_text.setAttribute("value",`Lives: ${hearts_count}`);
+  hearts_text.setAttribute("value",`Lives: ${hearts_count}`);
   score_text.setAttribute("value",`Score: ${score_count}`);
 
 
@@ -85,13 +85,12 @@ function loop(){
 
     
 
-    if(distance(rocket.obj,camera) < 3){
-      //console.log("hit");
-      //rocket.obj.setAttribute("position",{x:this.x,y:-100,z:this.z});
-      //rocket.obj.y = -100;
-      //hearts_count++;
-      //rocket.obj.object3D.position.y = -100;
-      //rocket.hit();
+    if(rocket.flag2 && distance(rocket.obj,camera) < 1){
+      rocket.flag2 = false;
+      hearts_count--;
+      rocket.flag = true;
+      hit_count++;
+      console.log(hit_count);
     }
     
     rocket.launch();
@@ -100,8 +99,7 @@ function loop(){
 
 
   for(let ufo of ufos){
-    if(distance(ufo.obj,camera) < 3){
-      console.log("hit");
+    if(distance(ufo.obj,camera) < 1){
       //ufo.flag = true;
       ufo.obj.object3D.position.y = -100;
       ammo_count++;
@@ -119,11 +117,11 @@ function loop(){
   }
 
 
-
-  if(score_count > 19){
+  let total_count = score_count + hit_count;
+  if(total_count > 19){
     win.setAttribute("opacity", 1);
     lose.setAttribute("opacity", 0);
-  } else if(time_count < 0){
+  } else if(time_count < 0 || hearts_count < 0){
     win.setAttribute("opacity", 0);
     lose.setAttribute("opacity", 1);
   }
