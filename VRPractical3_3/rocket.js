@@ -1,7 +1,7 @@
 class Rocket{
-  constructor(x,z,speed,rotate){
+  constructor(x,y,z,speed,rotate){
     this.x = x;
-    this.y = 5;
+    this.y = y;
     this.z = z;
     this.a = 0;
     this.speed = speed;
@@ -30,6 +30,14 @@ class Rocket{
       //this.obj.object3D.position.y = this.crash;
     }
   }
+
+
+  hit(){
+    this.obj.setAttribute("position",{x:this.x,y:-100,z:this.z});
+    //this.obj.object3D.position.y = 5;
+  }
+
+
 
 
 }

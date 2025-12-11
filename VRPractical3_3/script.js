@@ -1,12 +1,39 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [];
+let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 10, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ];
+
+
+
+let layout = [
+"xxx",
+"xxx",
+];
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
   rocketTemplate = document.querySelector("#rocketTemplate");
   ufoTemplate = document.querySelector("#ufoTemplate");
+  ammo_text = document.getElementById("ammo");
+  time_text = document.getElementById("time");
+  hearts_text = document.getElementById("hearts");
   score_text = document.getElementById("score");
+  streetTemplate = document.querySelector("#streetTemplate");
+
+  win = document.getElementById("win_img");
+  lose = document.getElementById("lose_img");
+
+
+  for(let r = 0; r < layout.length; r++){
+    let row = layout[r];
+    let cols = row.split("");
+
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        let street = new Street(60*c-75,60*r);
+        streets.push(street);
+      }  
+    }
+  }
 
 
   window.addEventListener("keydown",function(e){
@@ -18,56 +45,70 @@ window.addEventListener("DOMContentLoaded",function() {
   })
 
 
-  for(let i = 0; i < 50; i++){
+  for(let i = 0; i < 20; i++){
     let x = rnd(-50, 50);
-    let z = rnd(-200, 0);
-    //let speed = rnd(2, 10)/100;
-    let speed = 0.05;
+    let y = rnd(-1, 4);
+    let z = rnd(-125, -25);
+    let speed = rnd(5, 10)/100;
     let rotate = rnd(25, 40)/10;
 
-    rockets.push(new Rocket(x,z,speed,rotate))
+    rockets.push(new Rocket(x,y,z,speed,rotate))
    }
 
 
-  for(let i = 0; i < 10; i++){
-    let x = rnd(-25, 25);
-    let z = rnd(0, -50);
-    //let ufo = new UFO(x, z);
-    //ufos.push(ufo);
+  for(let i = 0; i < 25; i++){
+    let x = rnd(-50, 50);
+    let z = rnd(-50, 50);
     ufos.push(new UFO(x,z));
   }
 
-  
-  setTimeout(loop,100);
-  setTimeout(countdown,100);
+  setTimeout(loop,300);
+  setTimeout(countdown,300);  
 })
 
 function loop(){
 
-  score_text.setAttribute("value",`Ammo: ${ammo_count}`);
+  ammo_text.setAttribute("value",`Ammo: ${ammo_count}`);
+  time_text.setAttribute("value",`${time_count} seconds`);
+  //hearts_text.setAttribute("value",`Lives: ${hearts_count}`);
+  score_text.setAttribute("value",`Score: ${score_count}`);
 
 
   for(let rocket of rockets){
     if(bullet && distance(rocket.obj,bullet.obj) < 3){
       rocket.flag = true;
-      console.log("hit");
+      score_count++;
+      rocket.obj.object3D.position.y = -100;
+      bullet.obj.object3D.position.y = -100;
+      rocket.spin()
     }
+
+    
+
+    if(distance(rocket.obj,camera) < 3){
+      //console.log("hit");
+      //rocket.obj.setAttribute("position",{x:this.x,y:-100,z:this.z});
+      //rocket.obj.y = -100;
+      //hearts_count++;
+      //rocket.obj.object3D.position.y = -100;
+      //rocket.hit();
+    }
+    
     rocket.launch();
     rocket.spin()
   }
 
 
-
   for(let ufo of ufos){
     if(distance(ufo.obj,camera) < 3){
-      //rocket.flag = true;;
       console.log("hit");
-      ufo.flag = true;
-      ufo.obj.setAttribute("position",{x:this.x,y:-100,z:this.z});
+      //ufo.flag = true;
+      ufo.obj.object3D.position.y = -100;
       ammo_count++;
     }
     ufo.spin();
   }
+
 
 
 
@@ -79,7 +120,13 @@ function loop(){
 
 
 
-
+  if(score_count > 19){
+    win.setAttribute("opacity", 1);
+    lose.setAttribute("opacity", 0);
+  } else if(time_count < 0){
+    win.setAttribute("opacity", 0);
+    lose.setAttribute("opacity", 1);
+  }
 
 
  
@@ -87,7 +134,7 @@ function loop(){
 }
 
 function countdown(){
-
+  time_count--;
   setTimeout(countdown,1000);
 }
 

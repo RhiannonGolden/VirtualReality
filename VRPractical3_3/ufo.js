@@ -15,7 +15,7 @@ class UFO{
 
   spin(){
         this.a += this.da;
-        this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
+        this.obj.setAttribute("rotation",{x:this.a, y:this.a, z:this.a});
     }
 
 

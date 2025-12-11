@@ -1,9 +1,7 @@
 class Bullet{
   constructor(){
-    //this.obj = document.createElement("a-sphere");
-
-
    this.a = 0;
+   this.plus = false;
 
 
     this.obj = ufoTemplate.cloneNode(true);
@@ -35,4 +33,6 @@ class Bullet{
     this.a += 15;
     this.obj.setAttribute("rotation",{x:this.a, y:0, z:0});
     }
+
+
 }
