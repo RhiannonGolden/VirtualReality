@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 120, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ], hit_count = 0;
+let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 120, time_text, hearts_count = 4, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ], hit_count = 0;
 
 
 
@@ -62,8 +62,8 @@ window.addEventListener("DOMContentLoaded",function() {
     ufos.push(new UFO(x,z));
   }
 
-  setTimeout(loop,500);
-  setTimeout(countdown,500);  
+  setTimeout(loop,300);
+  setTimeout(countdown,300);  
 })
 
 function loop(){
@@ -85,7 +85,7 @@ function loop(){
 
     
 
-    if(rocket.flag2 && distance(rocket.obj,camera) < 2.5){
+    if(rocket.flag2 && distance(rocket.obj,camera) < 1){
       rocket.flag2 = false;
       hearts_count--;
       rocket.flag = true;
@@ -121,7 +121,7 @@ function loop(){
   if(total_count > 14){
     win.setAttribute("opacity", 1);
     lose.setAttribute("opacity", 0);
-  } else if(time_count < 0 || hearts_count < 0){
+  } else if(time_count < 0 || hearts_count < 1){
     win.setAttribute("opacity", 0);
     lose.setAttribute("opacity", 1);
   }
