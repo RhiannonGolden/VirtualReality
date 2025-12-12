@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 60, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ], hit_count = 0;
+let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0, rocketTemplate, rockets = [ ], score_text, ufoTemplate, ufos = [], time_count = 120, time_text, hearts_count = 3, hearts_text, win, lose, score_count = 0, streetTemplate, streets = [ ], hit_count = 0;
 
 
 
@@ -45,25 +45,25 @@ window.addEventListener("DOMContentLoaded",function() {
   })
 
 
-  for(let i = 0; i < 20; i++){
-    let x = rnd(-50, 50);
+  for(let i = 0; i < 15; i++){
+    let x = rnd(-75, 75);
     let y = rnd(-1, 4);
-    let z = rnd(-150, -25);
+    let z = rnd(-100, 100);
     let speed = rnd(5, 10)/100;
     let rotate = rnd(25, 40)/10;
 
-    rockets.push(new Rocket(x,y,z,speed,rotate))
+    rockets.push(new Rocket(x,y,z,speed,rotate));
    }
 
 
-  for(let i = 0; i < 25; i++){
-    let x = rnd(-50, 50);
-    let z = rnd(-50, 50);
+  for(let i = 0; i < 30; i++){
+    let x = rnd(-75, 75);
+    let z = rnd(-75, 75);
     ufos.push(new UFO(x,z));
   }
 
-  setTimeout(loop,300);
-  setTimeout(countdown,300);  
+  setTimeout(loop,500);
+  setTimeout(countdown,500);  
 })
 
 function loop(){
@@ -85,7 +85,7 @@ function loop(){
 
     
 
-    if(rocket.flag2 && distance(rocket.obj,camera) < 1){
+    if(rocket.flag2 && distance(rocket.obj,camera) < 2.5){
       rocket.flag2 = false;
       hearts_count--;
       rocket.flag = true;
@@ -99,7 +99,7 @@ function loop(){
 
 
   for(let ufo of ufos){
-    if(distance(ufo.obj,camera) < 1){
+    if(distance(ufo.obj,camera) < 2.5){
       //ufo.flag = true;
       ufo.obj.object3D.position.y = -100;
       ammo_count++;
@@ -118,7 +118,7 @@ function loop(){
 
 
   let total_count = score_count + hit_count;
-  if(total_count > 19){
+  if(total_count > 14){
     win.setAttribute("opacity", 1);
     lose.setAttribute("opacity", 0);
   } else if(time_count < 0 || hearts_count < 0){

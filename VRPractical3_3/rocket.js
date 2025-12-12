@@ -9,17 +9,25 @@ class Rocket{
     this.flag = false;
     this.flag2 = true;
     this.drop = 0.15;
+    this.direction = 0;
     
     this.obj = rocketTemplate.cloneNode(true);
     this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
+    this.obj.setAttribute("rotation", {x:90,y:0,z:0});
 
     scene.append(this.obj);
   }
   
   
   launch(){
-      this.z += this.speed;
-      this.obj.setAttribute("position", {x:this.x,y:this.y,z:this.z});
+    this.z += this.speed;
+
+    if(this.z > 100 || this.z < -105){
+      this.speed = -this.speed;
+      this.direction = (this.direction + 180);
+    }
+    this.obj.setAttribute("position", {x:this.x,y:this.y,z:this.z});
+    this.obj.setAttribute("rotation", {x:90,y:this.direction,z:0});
   }
 
   spin(){
