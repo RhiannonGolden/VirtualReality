@@ -2,6 +2,8 @@ let rnd = (l,u) => Math.random()*(u-l)+l;
 let scene, boxes = [];
 window.onload = function(){
   scene = document.querySelector("a-scene");
+  s = document.querySelector("#s");
+  
   /* Challenge
      Create 10 random boxes through the world
   */
@@ -10,7 +12,10 @@ window.onload = function(){
   let z = rnd(-20,20);
   boxes.push( new Box(x,1,z) );
  }
- 
+
+
+
+ setTimeout(loop,100); 
 }
 
 
@@ -21,6 +26,10 @@ function loop(){
   for(let box of boxes){
     box.blast();
   }
+
+
+
+
     
   window.requestAnimationFrame( loop )
   

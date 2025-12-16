@@ -1,7 +1,11 @@
 class Box{
  constructor(x,y,z){
+  this.x = x;
+  this.y = y;
+  this.z = z;
   this.boom = false;
 
+  
    this.obj = document.createElement("a-box");
    /* Challenge
       Associate the fireball sound with the box and 
@@ -19,12 +23,13 @@ class Box{
         this.obj.components.sound.playSound();
       })
 
-   this.obj.setAttribute("position",{x:x,y:y,z:z});
+   this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
    scene.append(this.obj);
  } 
  blast(){
    if(this.boom){
-     this.obj.object3D.position.y += 0.02;
+    this.obj.object3D.position.y += 0.02;
+
    }
  }
 }
