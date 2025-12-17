@@ -18,9 +18,7 @@ class Lamp{
     /* Challenge: Make the bulb a point light source that can 
     cast a shadow and has an inital intensity of 0
     */
-    //this.bulb.setAttribute("light", {type:point});
-    this.bulb.setAttribute("light", {castShadow:true});
-    this.bulb.setAttribute("light", {intensity:0});
+    this.bulb.setAttribute("light", "type: point; intensity: 0; castShadow: true");
 
     
     this.bulb.onclick = ()=>{
